@@ -1,0 +1,275 @@
+[  
+  {  
+    "Property Name":"NELSON AVENUE FAMILY PARK",
+    "Property Number":"X295",
+    "Site Name":"Half-Nelson Playground",
+    "Site ID":"X295",
+    "Borough":"X",
+    "Community Board":205,
+    "Drinking Fountains":2,
+    "coordinates":[  
+      40.8468083,
+      -73.91917309999997
+    ]
+  },
+  {  
+    "Property Name":"CONCRETE PLANT PARK",
+    "Property Number":"X305",
+    "Site Name":"Concrete Plant Park",
+    "Site ID":"X305",
+    "Borough":"X",
+    "Community Board":202,
+    "Drinking Fountains":2,
+    "coordinates":[  
+      40.8255287,
+      -73.8850913
+    ]
+  },
+  {  
+    "Property Name":"BARRETTO POINT PARK",
+    "Property Number":"X307",
+    "Site Name":"Barretto Point Park",
+    "Site ID":"X307",
+    "Borough":"X",
+    "Community Board":202,
+    "Drinking Fountains":2,
+    "coordinates":[  
+      40.8055893,
+      -73.88824069999998
+    ]
+  },
+  {  
+    "Property Name":"MOHEGAN TRIANGLE",
+    "Property Number":"X334",
+    "Site Name":"Mohegan Triangle",
+    "Site ID":"X334",
+    "Borough":"X",
+    "Community Board":206,
+    "Drinking Fountains":2,
+    "coordinates":[  
+      40.844214,
+      -73.88481569999999
+    ]
+  },
+  {  
+    "Property Name":"BROWER PARK",
+    "Property Number":"B012",
+    "Site Name":"Brower Park",
+    "Site ID":"B012-03",
+    "Borough":"B",
+    "Community Board":308,
+    "Drinking Fountains":1,
+    "coordinates":[  
+      40.673499,
+      -73.94323399999996
+    ]
+  },
+  {  
+    "Property Name":"MARIA HERNANDEZ PARK",
+    "Property Number":"B016",
+    "Site Name":"Maria Hernandez Park",
+    "Site ID":"B016-01",
+    "Borough":"B",
+    "Community Board":304,
+    "Drinking Fountains":1,
+    "coordinates":[  
+      40.703177,
+      -73.923904
+    ]
+  },
+  {  
+    "Property Name":"BUSHWICK PLAYGROUND",
+    "Property Number":"B017",
+    "Site Name":"Bushwick Playground",
+    "Site ID":"B017",
+    "Borough":"B",
+    "Community Board":304,
+    "Drinking Fountains":6,
+    "coordinates":[  
+      40.6960282,
+      -73.91191630000003
+    ]
+  },
+  {  
+    "Property Name":"CANARSIE PARK",
+    "Property Number":"B018",
+    "Site Name":"Dinapoli Plgd",
+    "Site ID":"B018-01",
+    "Borough":"B",
+    "Community Board":318,
+    "Drinking Fountains":3,
+    "coordinates":[  
+      40.6308418,
+      -73.89299690000001
+    ]
+  },
+  {  
+    "Property Name":"BABI YAR TRIANGLE",
+    "Property Number":"BZ10",
+    "Site Name":"Babi Yar Triangle",
+    "Site ID":"BZ10",
+    "Borough":"B",
+    "Community Board":"NULL",
+    "Drinking Fountains":1,
+    "coordinates":[  
+      40.5793496,
+      -73.95460430000003
+    ]
+  },
+  {  
+    "Property Name":"ABINGDON SQUARE (T)",
+    "Property Number":"M001",
+    "Site Name":"Abingdon Square",
+    "Site ID":"M001",
+    "Borough":"M",
+    "Community Board":102,
+    "Drinking Fountains":1,
+    "coordinates":[  
+      40.7370041,
+      -74.00541369999996
+    ]
+  },
+  {  
+    "Property Name":"ANNUNCIATION PARK",
+    "Property Number":"M003",
+    "Site Name":"Annunciation Park",
+    "Site ID":"M003",
+    "Borough":"M",
+    "Community Board":109,
+    "Drinking Fountains":1,
+    "coordinates":[  
+      40.8182635,
+      -73.9522078
+    ]
+  },
+  {  
+    "Property Name":"ALLEN ST MALL",
+    "Property Number":"M004",
+    "Site Name":"Allen Mall One",
+    "Site ID":"M004",
+    "Borough":"M",
+    "Community Board":103,
+    "Drinking Fountains":2,
+    "coordinates":[  
+      40.7227803,
+      -73.9890863
+    ]
+  },
+  {  
+    "Property Name":"BATTERY PARK",
+    "Property Number":"M005",
+    "Site Name":"Peter Minuit Plaza",
+    "Site ID":"M005-06",
+    "Borough":"M",
+    "Community Board":101,
+    "Drinking Fountains":1,
+    "coordinates":[  
+      40.701747,
+      -74.01399600000002
+    ]
+  },
+  {  
+    "Property Name":"SILVER LAKE PARK",
+    "Property Number":"R022",
+    "Site Name":"Silver Lake Park Zone 2",
+    "Site ID":"R022-ZN02",
+    "Borough":"R",
+    "Community Board":501,
+    "Drinking Fountains":4,
+    "coordinates":[  
+      40.6245495,
+      -74.0916944
+    ]
+  },
+  {  
+    "Property Name":"TOMPKINSVILLE PARK",
+    "Property Number":"R024",
+    "Site Name":"Tompkinsville Park",
+    "Site ID":"R024",
+    "Borough":"R",
+    "Community Board":501,
+    "Drinking Fountains":1,
+    "coordinates":[  
+      40.6374135,
+      -74.07645930000001
+    ]
+  },
+  {  
+    "Property Name":"MAHONEY PLGD",
+    "Property Number":"R025",
+    "Site Name":"Mahoney Playground",
+    "Site ID":"R025",
+    "Borough":"R",
+    "Community Board":501,
+    "Drinking Fountains":2,
+    "coordinates":[  
+      40.6434007,
+      -74.08600430000001
+    ]
+  },
+  {  
+    "Property Name":"DUGAN PLGD",
+    "Property Number":"R026",
+    "Site Name":"Dugan Playground",
+    "Site ID":"R026",
+    "Borough":"R",
+    "Community Board":503,
+    "Drinking Fountains":3,
+    "coordinates":[  
+      40.5618039,
+      -74.1115302
+    ]
+  },
+  {  
+    "Property Name":"BOWNE PARK",
+    "Property Number":"Q006",
+    "Site Name":"Bowne Playground",
+    "Site ID":"Q006-01",
+    "Borough":"Q",
+    "Community Board":407,
+    "Drinking Fountains":1,
+    "coordinates":[  
+      40.7581374,
+      -73.82493829999999
+    ]
+  },
+  {  
+    "Property Name":"MICHAELIS-BAYSWATER PARK",
+    "Property Number":"Q007",
+    "Site Name":"Bayswater Park",
+    "Site ID":"Q007",
+    "Borough":"Q",
+    "Community Board":414,
+    "Drinking Fountains":3,
+    "coordinates":[  
+      40.599056,
+      -73.76911380000001
+    ]
+  },
+  {  
+    "Property Name":"BROOKVILLE PARK",
+    "Property Number":"Q008",
+    "Site Name":"Brookville Park Zone 2",
+    "Site ID":"Q008-ZN02",
+    "Borough":"Q",
+    "Community Board":413,
+    "Drinking Fountains":1,
+    "coordinates":[  
+      40.6628935,
+      -73.7429353
+    ]
+  },
+  {  
+    "Property Name":"HERMAN A MACNEIL PARK",
+    "Property Number":"Q009",
+    "Site Name":"MacNeil Playground",
+    "Site ID":"Q009-01",
+    "Borough":"Q",
+    "Community Board":407,
+    "Drinking Fountains":2,
+    "coordinates":[  
+      40.7926994,
+      -73.85215929999998
+    ]
+  }
+]
