@@ -7,10 +7,10 @@
     "Borough":"X",
     "Community Board":205,
     "Drinking Fountains":2,
-    "coordinates":[  
-      40.8468083,
-      -73.91917309999997
-    ]
+    "coordinates":{  
+      "lat":40.8468083,
+      "lon":-73.91917309999997
+    }
   },
   {  
     "Property Name":"CONCRETE PLANT PARK",
@@ -20,10 +20,10 @@
     "Borough":"X",
     "Community Board":202,
     "Drinking Fountains":2,
-    "coordinates":[  
-      40.8255287,
-      -73.8850913
-    ]
+    "coordinates":{  
+      "lat":40.8255287,
+      "lon":-73.8850913
+    }
   },
   {  
     "Property Name":"BARRETTO POINT PARK",
@@ -33,10 +33,10 @@
     "Borough":"X",
     "Community Board":202,
     "Drinking Fountains":2,
-    "coordinates":[  
-      40.8055893,
-      -73.88824069999998
-    ]
+    "coordinates":{  
+      "lat":40.8055893,
+      "lon":-73.88824069999998
+    }
   },
   {  
     "Property Name":"MOHEGAN TRIANGLE",
@@ -46,10 +46,10 @@
     "Borough":"X",
     "Community Board":206,
     "Drinking Fountains":2,
-    "coordinates":[  
-      40.844214,
-      -73.88481569999999
-    ]
+    "coordinates":{  
+      "lat":40.844214,
+      "lon":-73.88481569999999
+    }
   },
   {  
     "Property Name":"BROWER PARK",
@@ -59,10 +59,10 @@
     "Borough":"B",
     "Community Board":308,
     "Drinking Fountains":1,
-    "coordinates":[  
-      40.673499,
-      -73.94323399999996
-    ]
+    "coordinates":{  
+      "lat":40.673499,
+      "lon":-73.94323399999996
+    }
   },
   {  
     "Property Name":"MARIA HERNANDEZ PARK",
@@ -72,10 +72,10 @@
     "Borough":"B",
     "Community Board":304,
     "Drinking Fountains":1,
-    "coordinates":[  
-      40.703177,
-      -73.923904
-    ]
+    "coordinates":{  
+      "lat":40.703177,
+      "lon":-73.923904
+    }
   },
   {  
     "Property Name":"BUSHWICK PLAYGROUND",
@@ -85,10 +85,10 @@
     "Borough":"B",
     "Community Board":304,
     "Drinking Fountains":6,
-    "coordinates":[  
-      40.6960282,
-      -73.91191630000003
-    ]
+    "coordinates":{  
+      "lat":40.6960282,
+      "lon":-73.91191630000003
+    }
   },
   {  
     "Property Name":"CANARSIE PARK",
@@ -98,10 +98,10 @@
     "Borough":"B",
     "Community Board":318,
     "Drinking Fountains":3,
-    "coordinates":[  
-      40.6308418,
-      -73.89299690000001
-    ]
+    "coordinates":{  
+      "lat":40.6308418,
+      "lon":-73.89299690000001
+    }
   },
   {  
     "Property Name":"BABI YAR TRIANGLE",
@@ -111,10 +111,10 @@
     "Borough":"B",
     "Community Board":"NULL",
     "Drinking Fountains":1,
-    "coordinates":[  
-      40.5793496,
-      -73.95460430000003
-    ]
+    "coordinates":{  
+      "lat":40.5793496,
+      "lon":-73.95460430000003
+    }
   },
   {  
     "Property Name":"ABINGDON SQUARE (T)",
@@ -124,10 +124,10 @@
     "Borough":"M",
     "Community Board":102,
     "Drinking Fountains":1,
-    "coordinates":[  
-      40.7370041,
-      -74.00541369999996
-    ]
+    "coordinates":{  
+      "lat":40.7370041,
+      "lon":-74.00541369999996
+    }
   },
   {  
     "Property Name":"ANNUNCIATION PARK",
@@ -137,10 +137,10 @@
     "Borough":"M",
     "Community Board":109,
     "Drinking Fountains":1,
-    "coordinates":[  
-      40.8182635,
-      -73.9522078
-    ]
+    "coordinates":{  
+      "lat":40.8182635,
+      "lon":-73.9522078
+    }
   },
   {  
     "Property Name":"ALLEN ST MALL",
@@ -150,10 +150,10 @@
     "Borough":"M",
     "Community Board":103,
     "Drinking Fountains":2,
-    "coordinates":[  
-      40.7227803,
-      -73.9890863
-    ]
+    "coordinates":{  
+      "lat":40.7227803,
+      "lon":-73.9890863
+    }
   },
   {  
     "Property Name":"BATTERY PARK",
@@ -163,10 +163,10 @@
     "Borough":"M",
     "Community Board":101,
     "Drinking Fountains":1,
-    "coordinates":[  
-      40.701747,
-      -74.01399600000002
-    ]
+    "coordinates":{  
+      "lat":40.701747,
+      "lon":-74.01399600000002
+    }
   },
   {  
     "Property Name":"SILVER LAKE PARK",
@@ -176,10 +176,10 @@
     "Borough":"R",
     "Community Board":501,
     "Drinking Fountains":4,
-    "coordinates":[  
-      40.6245495,
-      -74.0916944
-    ]
+    "coordinates":{  
+      "lat":40.6245495,
+      "lon":-74.0916944
+    }
   },
   {  
     "Property Name":"TOMPKINSVILLE PARK",
@@ -189,10 +189,10 @@
     "Borough":"R",
     "Community Board":501,
     "Drinking Fountains":1,
-    "coordinates":[  
-      40.6374135,
-      -74.07645930000001
-    ]
+    "coordinates":{  
+      "lat":40.6374135,
+      "lon":-74.07645930000001
+    }
   },
   {  
     "Property Name":"MAHONEY PLGD",
@@ -202,10 +202,10 @@
     "Borough":"R",
     "Community Board":501,
     "Drinking Fountains":2,
-    "coordinates":[  
-      40.6434007,
-      -74.08600430000001
-    ]
+    "coordinates":{  
+      "lat":40.6434007,
+      "lon":-74.08600430000001
+    }
   },
   {  
     "Property Name":"DUGAN PLGD",
@@ -215,10 +215,10 @@
     "Borough":"R",
     "Community Board":503,
     "Drinking Fountains":3,
-    "coordinates":[  
-      40.5618039,
-      -74.1115302
-    ]
+    "coordinates":{  
+      "lat":40.5618039,
+      "lon":-74.1115302
+    }
   },
   {  
     "Property Name":"BOWNE PARK",
@@ -228,10 +228,10 @@
     "Borough":"Q",
     "Community Board":407,
     "Drinking Fountains":1,
-    "coordinates":[  
-      40.7581374,
-      -73.82493829999999
-    ]
+    "coordinates":{  
+      "lat":40.7581374,
+      "lon":-73.82493829999999
+    }
   },
   {  
     "Property Name":"MICHAELIS-BAYSWATER PARK",
@@ -241,10 +241,10 @@
     "Borough":"Q",
     "Community Board":414,
     "Drinking Fountains":3,
-    "coordinates":[  
-      40.599056,
-      -73.76911380000001
-    ]
+    "coordinates":{  
+      "lat":40.599056,
+      "lon":-73.76911380000001
+    }
   },
   {  
     "Property Name":"BROOKVILLE PARK",
@@ -254,10 +254,10 @@
     "Borough":"Q",
     "Community Board":413,
     "Drinking Fountains":1,
-    "coordinates":[  
-      40.6628935,
-      -73.7429353
-    ]
+    "coordinates":{  
+      "lat":40.6628935,
+      "lon":-73.7429353
+    }
   },
   {  
     "Property Name":"HERMAN A MACNEIL PARK",
@@ -267,9 +267,9 @@
     "Borough":"Q",
     "Community Board":407,
     "Drinking Fountains":2,
-    "coordinates":[  
-      40.7926994,
-      -73.85215929999998
-    ]
+    "coordinates":{  
+      "lat":40.7926994,
+      "lon":-73.85215929999998
+    }
   }
 ]
