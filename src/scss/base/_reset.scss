@@ -1,0 +1,56 @@
+// CSS reset
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, ol, ul, li, footer, header, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	// font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+li,
+ol {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+div, header, footer, section, img {
+  box-sizing: border-box;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	display: inline-block;
+}
+
+// HTML5 display reset for old browsers
+footer, header, menu, nav, section {
+	display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: 'Fira Sans', sans-serif;
+	width: 100%;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ol, ul {
+	list-style: none;
+}

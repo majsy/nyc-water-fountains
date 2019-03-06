@@ -14,6 +14,9 @@
     <script src="index.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVCWVs0cgNVIpGoM4qG75XK2E3COFXXIg" async defer></script>
 
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,500i|Hind:500" rel="stylesheet">
+
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -28,22 +31,54 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <div id="root">
-      <div id="map" style="width: 480px; height: 480px;"></div>
+    <main id="root">
+      <!-- <div id="map" style="width: 480px; height: 480px;"></div> -->
+      
+      <section class="location-wrapper">
+        <!-- <textarea id="out" cols="30" rows="10"></textarea> -->
+        <div class="step-1">
+          <button class="button get-location">
+            <h1 class="heading-01">Find water fountains near you</h1>
+          </button>
+        </div>
 
-      <form class="submit-address-form">
-        <input type="input" value="" placeholder="E.g. 123 Main st">
-        <button type="button" value="">Get coordinates</button>
-      </form>
-      <br>
-      <br>
-      <br>
+        <div class="step-2 hidden">
+          <h2 class="heading-01">Water fountains near you:</h2>
+          <div class="result-container"></div>
+        </div>
 
-       <!-- <textarea id="out" cols="30" rows="10"></textarea> -->
+      </section>
 
-      <button class="button get-location">Get current location</button>
+      <section class="address-wrapper">
+        <form class="submit-address-form">
+          <div>
+            <input type="radio" id="M" name="borough" value="M" checked>
+            <label for="M">Manhattan</label>
+          </div>
+          <div>
+            <input type="radio" id="B" name="borough" value="B">
+            <label for="B">Brooklyn</label>
+          </div>
+          <div>
+            <input type="radio" id="Q" name="borough" value="Q">
+            <label for="Q">Queens</label>
+          </div>
+          <div>
+            <input type="radio" id="X" name="borough" value="X">
+            <label for="X">Bronx</label>
+          </div>
+          <div>
+            <input type="radio" id="R" name="borough" value="R">
+            <label for="R">Staten Island</label>
+          </div>
+  
+  
+          <input type="input" value="" placeholder="E.g. 123 Main st">
+          <button type="button" value="">Get coordinates</button>
+        </form>
+      </section>
 
-    </div>
+    </main>
 
     <!--
       To begin the development, run `npm start` or `yarn start`.

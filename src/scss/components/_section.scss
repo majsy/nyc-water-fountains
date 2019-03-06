@@ -1,0 +1,45 @@
+section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+section.address-wrapper {
+  display: none;
+  opacity: 0;
+}
+
+section.location-wrapper {
+  .step-1,
+  .step-2 {
+    width: 100%;
+    height: 100%;
+    // max-width: 600px;
+    text-align: center;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &.hidden {
+      opacity: 0;
+      display: none;
+    }
+  }
+}
+
+button.get-location {
+  padding: 0;
+  margin-bottom: 50px;
+
+  .heading-01 {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,6 +1,6 @@
 /*global google*/
 
-import './index.css';
+import './scss/index.scss';
 import * as serviceWorker from './serviceWorker';
 import data from './data/fountainsSubset.json';
 import { run } from './dataPreprocessor'
@@ -8,10 +8,20 @@ import { run } from './dataPreprocessor'
 const haversine = require('haversine-distance');
 // run()
 
-const form = document.querySelector('form.submit-address-form')
+const form = document.querySelector('form.submit-address-form');
 const submitButton = form.querySelector('button');
 const input = form.querySelector('input');
 const getlocationButton = document.querySelector('button.get-location');
+
+const locationWrapper = document.querySelector('.location-wrapper');
+const locationStep1 = locationWrapper.querySelector('.step-1');
+const locationStep2 = locationWrapper.querySelector('.step-2');
+
+const addressWrapper = document.querySelector('.address-wrapper');
+
+const resultContainer = document.querySelector('.result-container');
+
+// const radioButton = form.querySelectorAll('input[borough]').checked
 
 const geocoder = new google.maps.Geocoder();
 
@@ -51,6 +61,12 @@ const codeAddress = (address) => {
   })
 }
 
+const getBorough = () => {
+  const selectedBorough = document.querySelector('input[name="borough"]:checked').value;
+
+  console.log(selectedBorough)
+}
+
 // get nearest fountain based on coordinates
 const getNearestFountain = (userCoordinates) => {
   const distanceList = data.map(fountain =>
@@ -71,6 +87,11 @@ getlocationButton.addEventListener('click', async () => {
     const coordinates = await getLocation()
     const nearest = getNearestFountain(coordinates)
     console.log(nearest)
+
+    locationStep1.classList.add('hidden');
+    locationStep2.classList.remove('hidden');
+
+    resultContainer.innerHTML = `<h2>${nearest.site_name}</h2>`
   } catch(e) {
     console.log('address is not valid')
   }
@@ -80,7 +101,7 @@ submitButton.addEventListener('click', async () => {
   const address = input.value;
 
   try {
-    const coordinates = await codeAddress(`${address}, New York`)
+    const coordinates = await codeAddress(`${address}, New York City, NY`)
     const nearest = getNearestFountain(coordinates)
     console.log(nearest)
   } catch(e) {
@@ -88,7 +109,9 @@ submitButton.addEventListener('click', async () => {
   }
 })
 
-
+// radioButton.addEventListener('change', () => {
+//   getBorough()
+// })
 
 
 // If you want your app to work offline and load faster, you can change
