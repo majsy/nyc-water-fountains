@@ -4,6 +4,7 @@ section {
   height: 100%;
   top: 0;
   left: 0;
+  padding: 0 30px;
 }
 
 section.address-wrapper {
@@ -21,7 +22,7 @@ section.location-wrapper {
     opacity: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 
     &.hidden {

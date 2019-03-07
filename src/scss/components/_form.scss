@@ -1,0 +1,32 @@
+form {
+  &.metric {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+
+    .radio-button {
+      display: inline-block;
+      margin-right: 10px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      label {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 18px;
+        color: #a1a1a1;
+      }
+
+      input {
+        display:none;
+
+        &:checked + label {
+          color: #000000;
+        }
+      }
+    }
+  }
+}

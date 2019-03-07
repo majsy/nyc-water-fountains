@@ -21,7 +21,8 @@ const addressWrapper = document.querySelector('.address-wrapper');
 
 const resultContainer = document.querySelector('.result-container');
 
-// const radioButton = form.querySelectorAll('input[borough]').checked
+const isMile = document.querySelector('input[type=radio]:checked').value === 'miles';
+const radioButton = document.querySelector('input[name="metric"]')
 
 const geocoder = new google.maps.Geocoder();
 
@@ -61,11 +62,11 @@ const codeAddress = (address) => {
   })
 }
 
-const getBorough = () => {
-  const selectedBorough = document.querySelector('input[name="borough"]:checked').value;
+// const getBorough = () => {
+//   const selectedBorough = document.querySelector('input[name="borough"]:checked').value;
 
-  console.log(selectedBorough)
-}
+//   console.log(selectedBorough)
+// }
 
 // get nearest fountain based on coordinates
 const getNearestFountain = (userCoordinates) => {
@@ -74,24 +75,34 @@ const getNearestFountain = (userCoordinates) => {
 
   const sorted = [...distanceList].sort((a, b) => a - b);
   const nearest = sorted[0];
-
   const index = distanceList.indexOf(nearest);
 
-  return data[index]
-}
+  const metric = isMile ? 1600 : 1000;
+  const distance = (distanceList[index] / metric).toFixed(2)
 
+  return {
+    nearest: data[index], 
+    distance 
+  }
+}
+ 
 
 // Event Listeners
 getlocationButton.addEventListener('click', async () => {
   try {
     const coordinates = await getLocation()
-    const nearest = getNearestFountain(coordinates)
-    console.log(nearest)
+    const fountain = getNearestFountain(coordinates)
+    console.log(fountain)
 
     locationStep1.classList.add('hidden');
     locationStep2.classList.remove('hidden');
 
-    resultContainer.innerHTML = `<h2>${nearest.site_name}</h2>`
+    resultContainer.innerHTML = `
+      <div class="item">
+        <h2>${fountain.nearest.site_name}</h2>
+        <h3>${fountain.distance}${isMile ? 'miles' : 'km'}</h3>
+      </div>
+    `
   } catch(e) {
     console.log('address is not valid')
   }
@@ -109,9 +120,9 @@ submitButton.addEventListener('click', async () => {
   }
 })
 
-// radioButton.addEventListener('change', () => {
-//   getBorough()
-// })
+radioButton.addEventListener('click', (e) => {
+  console.log('radio btn clicked')
+})
 
 
 // If you want your app to work offline and load faster, you can change

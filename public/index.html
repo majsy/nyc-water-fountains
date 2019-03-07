@@ -34,21 +34,38 @@
     <main id="root">
       <!-- <div id="map" style="width: 480px; height: 480px;"></div> -->
       
+      <!-- LOCATION SECTION -->
       <section class="location-wrapper">
         <!-- <textarea id="out" cols="30" rows="10"></textarea> -->
+
+        <!-- Step 1 -->
         <div class="step-1">
           <button class="button get-location">
             <h1 class="heading-01">Find water fountains near you</h1>
           </button>
         </div>
 
-        <div class="step-2 hidden">
+        <!-- Step 2 -->
+        <div class="step-2 ">
+          <form class="metric">
+            <div class="radio-button">
+              <input type="radio" id="miles" name="metric" value="miles" checked>
+              <label for="miles">Miles </label>
+            </div>
+            <div class="radio-button">
+              <input type="radio" id="km" name="metric" value="km">
+              <label for="km">Km</label>
+              
+            </div>
+          </form>
+
           <h2 class="heading-01">Water fountains near you:</h2>
           <div class="result-container"></div>
         </div>
 
       </section>
 
+      <!-- ADDRESS SECTION -->
       <section class="address-wrapper">
         <form class="submit-address-form">
           <div>
