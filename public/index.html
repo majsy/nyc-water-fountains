@@ -11,8 +11,8 @@
     -->
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVCWVs0cgNVIpGoM4qG75XK2E3COFXXIg"></script>
     <script src="index.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVCWVs0cgNVIpGoM4qG75XK2E3COFXXIg" async defer></script>
 
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,500i|Hind:500" rel="stylesheet">
@@ -46,7 +46,7 @@
         </div>
 
         <!-- Step 2 -->
-        <div class="step-2 ">
+        <div class="step-2 hidden ">
           <form class="metric">
             <div class="radio-button">
               <input type="radio" id="miles" name="metric" value="miles" checked>
@@ -54,7 +54,7 @@
             </div>
             <div class="radio-button">
               <input type="radio" id="km" name="metric" value="km">
-              <label for="km">Km</label>
+              <label for="km">KM</label>
               
             </div>
           </form>

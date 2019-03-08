@@ -22,7 +22,7 @@ const addressWrapper = document.querySelector('.address-wrapper');
 const resultContainer = document.querySelector('.result-container');
 
 const isMile = document.querySelector('input[type=radio]:checked').value === 'miles';
-const radioButton = document.querySelector('input[name="metric"]')
+const unitRadioButtons = Array.from(document.querySelectorAll('.metric input[name="metric"]'));
 
 const geocoder = new google.maps.Geocoder();
 
@@ -120,9 +120,9 @@ submitButton.addEventListener('click', async () => {
   }
 })
 
-radioButton.addEventListener('click', (e) => {
-  console.log('radio btn clicked')
-})
+unitRadioButtons.forEach(radio => radio.addEventListener('click', (e) => {
+  console.log(e.target.value)
+}))
 
 
 // If you want your app to work offline and load faster, you can change
