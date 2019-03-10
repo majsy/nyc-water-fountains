@@ -2,6 +2,7 @@ import { h, Component } from 'preact';
 import LocationSection from './LocationSection';
 import AddressSection from './AddressSection';
 import ResultSection from './ResultSection';
+import Header from './Header';
 import Footer from './Footer';
 
 import data from '../../data/fountainsSubset.json';
@@ -45,9 +46,9 @@ export default class App extends Component {
     const sorted = [...distanceList].sort((a, b) => a - b);
     const nearest = sorted[0];
     const index = distanceList.indexOf(nearest);
-    const mile = 1600;
+    const meteroToMile = 1600;
   
-    const distance = (distanceList[index] / mile)
+    const distance = (distanceList[index] / meteroToMile)
   
     return {
       nearest: data[index], 
@@ -68,7 +69,7 @@ export default class App extends Component {
   }
 
   getSectionOnClick = () => {
-    this.setState({isLocation : !this.state.isLocation})
+    this.setState({isLocation: !this.state.isLocation, isResult: false})
   }
 
   render() {
@@ -80,6 +81,7 @@ export default class App extends Component {
 
     return (
       <div>
+        <Header />
         <main>
           { renderLocationSection &&
             <LocationSection getLocationOnClick={this.getLocationOnClick} /> 
