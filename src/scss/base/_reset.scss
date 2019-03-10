@@ -1,5 +1,5 @@
 // CSS reset
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, fieldset, pre,
 a, ol, ul, li, footer, header, menu, nav, section {
 	margin: 0;
 	padding: 0;
@@ -23,7 +23,7 @@ ol {
   -moz-osx-font-smoothing: grayscale;
 }
 
-div, header, footer, section, img {
+div, header, footer, section, img, input, button {
   box-sizing: border-box;
 }
 

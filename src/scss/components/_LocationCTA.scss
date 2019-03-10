@@ -1,3 +1,13 @@
 .LocationCTA {
-  
+  display: inline-block;
+  background-color: transparent;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  .heading-01 {
+    text-decoration: underline;
+  }
 }

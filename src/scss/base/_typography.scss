@@ -1,6 +1,8 @@
 .heading-01,
 .heading-02,
-.heading-03 {
+.heading-03,
+.heading-04,
+.heading-05 {
   font-family: 'Fira Sans', sans-serif;
   font-style: italic;
   font-size: 62px;
@@ -14,4 +16,14 @@
 
 .heading-03 {
   font-size: 32px;
+}
+
+.heading-04 {
+  font-size: 22px;
+}
+
+.heading-05 {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
 }

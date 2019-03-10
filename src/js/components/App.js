@@ -4,10 +4,12 @@ import AddressSection from './AddressSection';
 import ResultSection from './ResultSection';
 import Header from './Header';
 import Footer from './Footer';
-
 import data from '../../data/fountainsSubset.json';
-const haversine = require('haversine-distance');
+
 /** @jsx h */
+/*global google*/
+const haversine = require('haversine-distance');
+const geocoder = new google.maps.Geocoder();
 
 export default class App extends Component {
   constructor() {
@@ -68,6 +70,38 @@ export default class App extends Component {
     }
   }
 
+  codeAddress = (address) => {
+    return new Promise((resolve, reject) => {
+      geocoder.geocode({'address': address}, (results, status) => {
+        if (status === 'OK') {
+          resolve({
+            lat: results[0].geometry.location.lat(),
+            lon: results[0].geometry.location.lng()
+          })  
+        } else {
+          reject(status);
+        }
+      });
+    })
+  }
+
+  setBorough = (e) => {
+    // this.setState({isMile: e.target.value === 'miles'})
+    console.log(e.target.value)
+  }
+
+  submitAddressForm = async () => {
+    const address = '123 Main st';
+
+    try {
+      const coordinates = await this.codeAddress(`${address}, New York City, NY`)
+      const nearest = this.getNearestFountain(coordinates)
+      console.log(nearest)
+    } catch(e) {
+      console.log('address is not valid')
+    }
+  } 
+
   getSectionOnClick = () => {
     this.setState({isLocation: !this.state.isLocation, isResult: false})
   }
@@ -87,7 +121,7 @@ export default class App extends Component {
             <LocationSection getLocationOnClick={this.getLocationOnClick} /> 
           }
           { renderAddressSection &&
-            <AddressSection /> 
+            <AddressSection setBorough={this.setBorough} /> 
           }
           { renderResultSection &&
             <ResultSection result={result} isLocation={isLocation} /> 

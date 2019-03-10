@@ -15,12 +15,12 @@ export default class UnitForm extends Component {
       <form className="UnitForm">
         <label className={`radio-button ${isMile ? 'checked' : ''}`}>
           <input type="radio" name="unit" value="miles"
-            onChange={this.handleChange}/> Miles
+            onChange={this.handleChange}/> miles
         </label>
 
         <label className={`radio-button ${!isMile ? 'checked' : ''}`}>
           <input type="radio" name="unit" value="km" 
-            onChange={this.handleChange}/> KM  
+            onChange={this.handleChange}/> km  
         </label>
       </form>
     );

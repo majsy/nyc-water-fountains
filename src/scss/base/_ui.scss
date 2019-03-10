@@ -13,3 +13,13 @@
   justify-content: center;
   text-align: center;
 }
+
+.ui-radio-button {
+  display: inline-block;
+  cursor: pointer;
+  font-family: 'Fira Sans', sans-serif;
+
+  input {
+    display: none;
+  }
+}

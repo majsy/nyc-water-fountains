@@ -1,27 +1,23 @@
+@import '../base/ui.scss';
+
 .UnitForm {
   position: absolute;
-    top: 0;
-    right: 0;
-    padding: 20px;
+  top: 0;
+  right: 0;
+  padding: 20px;
 
-    .radio-button {
-      display: inline-block;
-      margin-right: 10px;
-      cursor: pointer;
-      font-family: 'Fira Sans', sans-serif;
-      font-size: 18px;
-      color: #a1a1a1;
+  .radio-button { 
+    @extend .ui-radio-button;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #a1a1a1;
 
-      &:last-child {
-        margin-right: 0;
-      }
-
-      input {
-        display:none;
-      }
-
-      &.checked {
-        color: #000;
-      }
+    &:last-child {
+      margin-right: 0;
     }
+
+    &.checked {
+      color: #000;
+    }
+  }
 }
