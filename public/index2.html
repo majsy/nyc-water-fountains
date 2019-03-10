@@ -31,7 +31,40 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <div id="root"></div>
+    <main id="root">
+      <!-- <div id="map" style="width: 480px; height: 480px;"></div> -->
+
+      <!-- ADDRESS SECTION -->
+      <section class="address-wrapper">
+        <form class="submit-address-form">
+          <div>
+            <input type="radio" id="M" name="borough" value="M" checked>
+            <label for="M">Manhattan</label>
+          </div>
+          <div>
+            <input type="radio" id="B" name="borough" value="B">
+            <label for="B">Brooklyn</label>
+          </div>
+          <div>
+            <input type="radio" id="Q" name="borough" value="Q">
+            <label for="Q">Queens</label>
+          </div>
+          <div>
+            <input type="radio" id="X" name="borough" value="X">
+            <label for="X">Bronx</label>
+          </div>
+          <div>
+            <input type="radio" id="R" name="borough" value="R">
+            <label for="R">Staten Island</label>
+          </div>
+  
+  
+          <input type="input" value="" placeholder="E.g. 123 Main st">
+          <button type="button" value="">Get coordinates</button>
+        </form>
+      </section>
+
+    </main>
 
     <!--
       To begin the development, run `npm start` or `yarn start`.

@@ -1,16 +1,8 @@
 @import './base/reset';
+@import './base/typography';
 
 @import './components/section';
-@import './components/form';
-@import './components/result';
 
-.heading-01 {
-  font-family: 'Fira Sans', sans-serif;
-  font-style: italic;
-  font-size: 62px;
-  font-weight: 500;
-  line-height: 1.1;
-}
 
 h2 {
   font-size: 32px;
