@@ -86,10 +86,10 @@ export default class App extends Component {
     })
   }
 
-  setBorough = (e) => {
-    // this.setState({isMile: e.target.value === 'miles'})
-    console.log(e.target.value)
-  }
+  // setBorough = (e) => {
+  //   console.log(e.target.value)
+  //   // this.setState({borough: e.target.value})
+  // }
 
   setAddress = (e) => {
     console.log(e.target.value)

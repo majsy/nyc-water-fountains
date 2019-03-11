@@ -3,12 +3,22 @@ import '../../scss/components/_AddressForm.scss';
 /** @jsx h */
 
 export default class AddressForm extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      borough: undefined,
+      inputHasChanged: false
+    }
+  }
 
   handleRadioButtonChange = (e) => {
-    this.props.setBorough(e)
+    // this.props.setBorough(e)
+    this.setState({borough: e.target.value})
   }
 
   handleInputChange = (e) => {
+    this.setState({inputHasChanged: true})
     this.props.setAddress(e)
   }
 
@@ -17,6 +27,8 @@ export default class AddressForm extends Component {
   }
 
   render() {
+    const { inputHasChanged, borough } = this.state;
+
     return (
       <form className="AddressForm">
         <div className="radio-button-group">
@@ -45,7 +57,7 @@ export default class AddressForm extends Component {
 
         <div className="address-input">
           <h5 className="heading-05">2. Type address or location</h5>
-          <input type="input" value="" placeholder="E.g. 350 Broadway" onChange={this.handleInputChange} />
+          <input type="input" value={``} placeholder="E.g. 350 Broadway" onChange={this.handleInputChange} />
         </div>
         
         <button className="submit-button" type="button" value="" onClick={this.handleSubmit}>
