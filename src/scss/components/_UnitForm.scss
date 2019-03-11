@@ -1,8 +1,9 @@
 @import '../base/ui.scss';
+@import '../base/variables.scss';
 
 .UnitForm {
   position: absolute;
-  top: 0;
+  top: $headerHeight;
   right: 0;
   padding: 20px;
 

@@ -18,7 +18,8 @@ export default class App extends Component {
     this.state = {
       isLocation: true,
       isResult: false,
-      result: undefined
+      result: undefined,
+      address: ''
     }
   }
 
@@ -90,13 +91,18 @@ export default class App extends Component {
     console.log(e.target.value)
   }
 
+  setAddress = (e) => {
+    console.log(e.target.value)
+    this.setState({address: e.target.value})
+  }
+
   submitAddressForm = async () => {
-    const address = '123 Main st';
+    const address = this.state.address;
 
     try {
       const coordinates = await this.codeAddress(`${address}, New York City, NY`)
-      const nearest = this.getNearestFountain(coordinates)
-      console.log(nearest)
+      const fountain = this.getNearestFountain(coordinates)
+      this.setState({result: fountain, isResult: true})
     } catch(e) {
       console.log('address is not valid')
     }
@@ -107,7 +113,7 @@ export default class App extends Component {
   }
 
   render() {
-    const { result, isResult, isLocation } = this.state;
+    const { result, isResult, isLocation, address } = this.state;
 
     const renderLocationSection = !isResult && isLocation;
     const renderAddressSection = !isResult && !isLocation;
@@ -121,10 +127,10 @@ export default class App extends Component {
             <LocationSection getLocationOnClick={this.getLocationOnClick} /> 
           }
           { renderAddressSection &&
-            <AddressSection setBorough={this.setBorough} /> 
+            <AddressSection setBorough={this.setBorough} setAddress={this.setAddress} submitAddressForm={this.submitAddressForm} /> 
           }
           { renderResultSection &&
-            <ResultSection result={result} isLocation={isLocation} /> 
+            <ResultSection result={result} isLocation={isLocation} address={address} /> 
           }
         </main>
         <Footer isLocation={isLocation} getSectionOnClick={this.getSectionOnClick} />

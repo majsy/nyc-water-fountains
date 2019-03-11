@@ -18,8 +18,8 @@ export default class ResultSection extends Component {
 
   render() {
     const { isMile } = this.state;
-    const { result, isLocation } = this.props;
-    const heading = isLocation ? `Water fountains near you:` : `Water fountains near address:`;
+    const { result, isLocation, address } = this.props;
+    const heading = isLocation ? `Water fountains near you:` : `Water fountains near ${address}:`;
     const unit = isMile ? 'miles' : 'km';
     const milesToKm = 1.609344;
     const distance = isMile ? result.distance.toFixed(2) : (result.distance * milesToKm).toFixed(2);
