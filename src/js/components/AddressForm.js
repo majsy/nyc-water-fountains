@@ -1,10 +1,13 @@
 import { h, Component } from 'preact';
 import '../../scss/components/_AddressForm.scss';
 /** @jsx h */
+/*global google*/
 
 export default class AddressForm extends Component {
   constructor() {
     super()
+
+    // this.inputField = React.createRef();
 
     this.state = {
       borough: undefined,
@@ -12,10 +15,26 @@ export default class AddressForm extends Component {
     }
   }
 
-  handleRadioButtonChange = (e) => {
-    // this.props.setBorough(e)
-    this.setState({borough: e.target.value})
+  inputChange = () => {
+    const defaultBounds = new google.maps.LatLngBounds(
+      new google.maps.LatLng(-33.8902, 151.1759),
+      new google.maps.LatLng(-33.8474, 151.2631)
+    );
+
+    const input = document.querySelector('.address-input input')
+    
+    const options = {
+      // bounds: defaultBounds,
+      types: ['address']
+    };
+
+    const autocomplete = new google.maps.places.Autocomplete(input, options);
   }
+
+  // handleRadioButtonChange = (e) => {
+  //   // this.props.setBorough(e)
+  //   this.setState({borough: e.target.value})
+  // }
 
   handleInputChange = (e) => {
     this.setState({inputHasChanged: true})
@@ -31,7 +50,7 @@ export default class AddressForm extends Component {
 
     return (
       <form className="AddressForm">
-        <div className="radio-button-group">
+        {/* <div className="radio-button-group">
           <h5 className="heading-05">1. Select borough</h5>
           <label className={`radio-button`}>
             <input type="radio" name="borough" value="Manhattan" onChange={this.handleRadioButtonChange}/> 
@@ -53,11 +72,11 @@ export default class AddressForm extends Component {
             <input type="radio" name="borough" value="Staten Island" onChange={this.handleRadioButtonChange}/> 
             Staten Island
           </label>
-        </div>  
+        </div>   */}
 
         <div className="address-input">
           <h5 className="heading-05">2. Type address or location</h5>
-          <input type="input" value={``} placeholder="E.g. 350 Broadway" onChange={this.handleInputChange} />
+          <input type="input" value={``} placeholder="E.g. 350 Broadway" onChange={this.inputChange} />
         </div>
         
         <button className="submit-button" type="button" value="" onClick={this.handleSubmit}>

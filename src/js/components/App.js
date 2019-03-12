@@ -6,6 +6,7 @@ import Header from './Header';
 import Footer from './Footer';
 import data from '../../data/fountainsSubset.json';
 
+
 /** @jsx h */
 /*global google*/
 const haversine = require('haversine-distance');
