@@ -87,21 +87,17 @@ export default class App extends Component {
     })
   }
 
-  // setBorough = (e) => {
-  //   console.log(e.target.value)
-  //   // this.setState({borough: e.target.value})
-  // }
-
-  setAddress = (e) => {
-    console.log(e.target.value)
-    this.setState({address: e.target.value})
+  onAutocomplete = (location) => {
+    const fountain = this.getNearestFountain({
+      lat: location.lat(),
+      lon: location.lng(),
+    })
+    this.setState({result: fountain, isResult: true})
   }
 
-  submitAddressForm = async () => {
-    const address = this.state.address;
-
+  submitAddressForm = async (address) => {
     try {
-      const coordinates = await this.codeAddress(`${address}, New York City, NY`)
+      const coordinates = await this.codeAddress(`${address}`)
       const fountain = this.getNearestFountain(coordinates)
       this.setState({result: fountain, isResult: true})
     } catch(e) {
@@ -128,7 +124,7 @@ export default class App extends Component {
             <LocationSection getLocationOnClick={this.getLocationOnClick} /> 
           }
           { renderAddressSection &&
-            <AddressSection setBorough={this.setBorough} setAddress={this.setAddress} submitAddressForm={this.submitAddressForm} /> 
+            <AddressSection setBorough={this.setBorough} onAutocomplete={this.onAutocomplete} submitAddressForm={this.submitAddressForm} /> 
           }
           { renderResultSection &&
             <ResultSection result={result} isLocation={isLocation} address={address} /> 

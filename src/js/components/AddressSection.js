@@ -5,12 +5,12 @@ import AddressForm from './AddressForm';
 
 export default class AddressSection extends Component {
   render() {
-    const { setBorough, setAddress, submitAddressForm } = this.props;
+    const { setBorough, onAutocomplete, submitAddressForm } = this.props;
 
     return (
       <section className="AddressSection">
         <h2 className="heading-02">Find water fountains near address</h2>
-        <AddressForm setBorough={setBorough} setAddress={setAddress} submitAddressForm={submitAddressForm} />
+        <AddressForm setBorough={setBorough} onAutocomplete={onAutocomplete} submitAddressForm={submitAddressForm} />
       </section>
     );
   }
