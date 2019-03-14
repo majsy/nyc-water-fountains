@@ -10,7 +10,7 @@ export default class Footer extends Component {
   render() {
     const { isLocation } = this.props;
     const data = isLocation ? 'Find water fountain near address' 
-      : 'Find water fountain near you';
+      : 'Find water fountain near me';
 
     return (
       <footer className="Footer">

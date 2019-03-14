@@ -2,16 +2,12 @@
 
 .ResultSection {
   @extend .ui-section;
-  
-  .item {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    background-color: lightpurple;
-    color: #000;
-    padding: 0 20px;
-    height: 80px;
-    width: 100%;
-    text-align: left;
+
+  .content-container {
+    @extend .ui-content-container;
+
+    .result {
+      margin-top: 10px;
+    }
   }
 }

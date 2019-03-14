@@ -9,7 +9,9 @@ export default class LocationSection extends Component {
 
     return (
       <section className="LocationSection">
-        <LocationCTA getLocationOnClick={getLocationOnClick}/>
+        <div class="content-container">
+          <LocationCTA getLocationOnClick={getLocationOnClick}/>
+        </div>        
       </section>
     );
   }

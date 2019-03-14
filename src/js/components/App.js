@@ -6,9 +6,9 @@ import Header from './Header';
 import Footer from './Footer';
 import data from '../../data/fountainsSubset.json';
 
-
 /** @jsx h */
 /*global google*/
+
 const haversine = require('haversine-distance');
 const geocoder = new google.maps.Geocoder();
 
@@ -20,10 +20,10 @@ export default class App extends Component {
       isLocation: true,
       isResult: false,
       result: undefined,
-      address: ''
+      submittedAddress: undefined
     }
   }
-
+  
   getLocation = () => {
     return new Promise((resolve, reject) => {
       if (navigator.geolocation) {
@@ -87,19 +87,27 @@ export default class App extends Component {
     })
   }
 
-  onAutocomplete = (location) => {
+  onAutocomplete = (location, address) => {
     const fountain = this.getNearestFountain({
       lat: location.lat(),
       lon: location.lng(),
     })
-    this.setState({result: fountain, isResult: true})
+    this.setState({
+      result: fountain, 
+      isResult: true, 
+      submittedAddress: address
+    })
   }
 
   submitAddressForm = async (address) => {
     try {
       const coordinates = await this.codeAddress(`${address}`)
       const fountain = this.getNearestFountain(coordinates)
-      this.setState({result: fountain, isResult: true})
+      this.setState({
+        result: fountain, 
+        isResult: true, 
+        submittedAddress: address
+      })
     } catch(e) {
       console.log('address is not valid')
     }
@@ -110,16 +118,17 @@ export default class App extends Component {
   }
 
   render() {
-    const { result, isResult, isLocation, address } = this.state;
+    const { result, isResult, isLocation, submittedAddress } = this.state;
 
     const renderLocationSection = !isResult && isLocation;
     const renderAddressSection = !isResult && !isLocation;
     const renderResultSection = isResult;
 
     return (
-      <div>
-        <Header />
+      <div class="App">
+        <Header /> 
         <main>
+          <div class="background-container"></div>
           { renderLocationSection &&
             <LocationSection getLocationOnClick={this.getLocationOnClick} /> 
           }
@@ -127,7 +136,7 @@ export default class App extends Component {
             <AddressSection setBorough={this.setBorough} onAutocomplete={this.onAutocomplete} submitAddressForm={this.submitAddressForm} /> 
           }
           { renderResultSection &&
-            <ResultSection result={result} isLocation={isLocation} address={address} /> 
+            <ResultSection result={result} isLocation={isLocation} submittedAddress={submittedAddress} /> 
           }
         </main>
         <Footer isLocation={isLocation} getSectionOnClick={this.getSectionOnClick} />

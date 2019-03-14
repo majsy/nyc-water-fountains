@@ -1,4 +1,5 @@
 @import '../base/ui.scss';
+@import '../base/variables.scss';
 
 .AddressForm {
   .radio-button-group {
@@ -20,11 +21,18 @@
 
     input {
       width: 100%;
-      max-width: 500px;
       height: 60px;
-      padding: 15px;
       border: none;
-      font-size: 20px;
+      color: $blue;
+      margin-top: 10px;
+
+      &::placeholder {
+        color: $grey;
+      }
+
+      &:focus {
+        outline: 3px dashed $orange;
+      }
     }
   } 
 

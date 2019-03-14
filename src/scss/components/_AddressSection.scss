@@ -2,4 +2,8 @@
 
 .AddressSection {
   @extend .ui-section;
+
+  .content-container {
+    @extend .ui-content-container;
+  }
 }

@@ -3,22 +3,23 @@
 
 .UnitForm {
   position: absolute;
-  top: $headerHeight;
+  top: 0;
   right: 0;
-  padding: 20px;
+  padding: 25px;
+
 
   .radio-button { 
     @extend .ui-radio-button;
     margin-right: 10px;
     font-size: 18px;
-    color: #a1a1a1;
+    color: $grey;
 
     &:last-child {
       margin-right: 0;
     }
 
     &.checked {
-      color: #000;
+      color: $orange;
     }
   }
 }

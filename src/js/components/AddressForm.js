@@ -32,10 +32,9 @@ export default class AddressForm extends Component {
     google.maps.event.addListener(autocomplete, 'place_changed', () => {
 
       const address = autocomplete.getPlace()
-
       this.setState({address: address.formatted_address});
 
-      this.props.onAutocomplete(address.geometry.location)
+      this.props.onAutocomplete(address.geometry.location, this.state.address)
     })
   }
 
@@ -52,8 +51,9 @@ export default class AddressForm extends Component {
     return (
       <form className="AddressForm">
         <div className="address-input">
-          <h5 className="heading-05">Type address or location in NYC</h5>
-          <input ref={(ref) => this.inputRef = ref} type="text" value={this.state.value} placeholder="E.g. 350 Broadway" onChange={this.handleInputChange} />
+          {/* <h5 className="heading-05">Type address or location in NYC</h5> */}
+          <h2 className="heading-02">Find water fountains near</h2>
+          <input className="heading-02" ref={(ref) => this.inputRef = ref} type="text" value={this.state.value} placeholder="address" onChange={this.handleInputChange} />
         </div>
         
         <button className="submit-button" type="button" value="" onClick={this.handleSubmit}>

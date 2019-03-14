@@ -10,7 +10,7 @@ export default class LocationCTA extends Component {
   render() {
     return (
       <button className="LocationCTA" onClick={this.handleClick}>
-        <span className="heading-01">Find water fountains near you</span>
+        <span className="heading-01">Find water fountains<br/>near me</span>
       </button>
     );
   }
