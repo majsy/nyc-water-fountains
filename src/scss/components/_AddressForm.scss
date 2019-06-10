@@ -25,9 +25,11 @@
       border: none;
       color: $blue;
       margin-top: 10px;
+      background-color: transparent;
 
       &::placeholder {
-        color: $grey;
+        // color: $grey;
+        color: $white;
       }
 
       &:focus {
