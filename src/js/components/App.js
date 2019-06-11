@@ -9,6 +9,9 @@ import data from '../../data/fountainsSubset.json';
 /** @jsx h */
 /*global google*/
 
+// API Key
+const API_KEY = process.env.REACT_APP_GOOGLE_MAPS_KEY;
+
 const haversine = require('haversine-distance');
 const geocoder = new google.maps.Geocoder();
 
