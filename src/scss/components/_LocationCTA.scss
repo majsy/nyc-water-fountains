@@ -1,3 +1,5 @@
+@import '../base/variables.scss';
+
 .LocationCTA {
   display: inline-block;
   background-color: transparent;
@@ -9,5 +11,17 @@
 
   .heading-01 {
     text-decoration: underline;
+    color: $white;
+    // position: relative;
+
+    // &:after {
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   content: "";
+    //   height: 2px;
+    //   background-color: $orange;
+    // }
   }
 }

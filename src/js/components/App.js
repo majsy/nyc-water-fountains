@@ -50,14 +50,23 @@ export default class App extends Component {
     const sorted = [...distanceList].sort((a, b) => a - b);
     const nearest = sorted[0];
     const index = distanceList.indexOf(nearest);
-    const meteroToMile = 1600;
-  
-    const distance = (distanceList[index] / meteroToMile)
+
+    // Convert Unit
+    const metersToMile = 1600;
+    const distance = (distanceList[index] / metersToMile);
+
+    // Get Place URL
+    const googleMapsQuery = 'https://www.google.com/maps/search/?api=1&query=';
+    const place = data[index].site_name;
+    const placeEncoded = encodeURI(place)
+    const url = googleMapsQuery.concat('', placeEncoded);
   
     return {
-      nearest: data[index], 
-      distance 
+      nearest: place, 
+      distance,
+      url
     }
+
   }
 
   getLocationOnClick = async () => {
@@ -66,6 +75,8 @@ export default class App extends Component {
       const fountain = this.getNearestFountain(coordinates)
 
       this.setState({result: fountain, isResult: true})
+
+      console.log(this.state.result.url)
 
     } catch(e) {
       console.log('address is not valid')

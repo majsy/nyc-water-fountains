@@ -1,5 +1,42 @@
 @import './variables';
 
+// Keyframe animation
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
 .ui-section {
   position: absolute;
   width: 100%;
@@ -13,7 +50,13 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: rgba(91,194,231, 0.6);
+
+  background: linear-gradient(-90deg, #2d80fd, #23A6D5, #1cbec3, #23D5AB);
+  background-size: 150% 150%;
+
+  -webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
 
   .ui-content-container {
     width: 70%;

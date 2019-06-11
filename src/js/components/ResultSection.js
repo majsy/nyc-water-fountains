@@ -30,7 +30,9 @@ export default class ResultSection extends Component {
         <div class="content-container">
           <UnitForm isMile={isMile} setUnit={this.setUnit} />
           <h2 class="heading-02">{heading}</h2>
-          <h3 class="heading-03 result">{result.nearest.site_name}, {distance}{unit}</h3>
+          <a href={result.url} target="_blank">
+            <h3 class="heading-03 result">{result.nearest}, {distance}{unit}</h3>
+          </a>
         </div>
       </section>
     );
